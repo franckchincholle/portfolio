@@ -25,14 +25,14 @@ const projectCardsData = [
         date: "19 Octobre 2025",
         description: "Plateforme de recherche d'emploi (job board) développée en utilisant les technologies web fondamentales.",
         tech: ["HTML", "CSS", "JavaScript"],
-        pdf: "Comming soon",
+        pdf: "Readme_OnlyJob.pdf",
     },
     {
         title: "Portfolio",
         subtitle: "PRE MSC",
         date: "26 Octobre 2025",
-        description: "Zabbix est une solution de supervision open source pour surveiller la disponibilité, les performances et l'intégrité des réseaux, serveurs et applications.",
-        tech: ["Linux", "Bash", "Supervision", "Monitoring"],
+        description: "Mon portfolio personnel que vous consultez actuellement, créé pour présenter mes compétences et mes projets.",
+        tech: ["React", "TypeScript", "SCSS", "Framer Motion"],
         pdf: "Site actuel",
     },
 ];
