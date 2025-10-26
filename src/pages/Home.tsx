@@ -133,7 +133,7 @@ const Home: React.FC = () => {
                 </nav>
 
                 <div className="social-icons">
-                    <a href="https://github.com/fchincholle" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/franckchincholle" target="_blank" rel="noopener noreferrer">
                         <GitHubIcon fontSize="large" />
                     </a>
                     <a
