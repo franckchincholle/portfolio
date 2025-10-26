@@ -14,7 +14,7 @@ const sectionsData = [
     { id: "experience", name: "Experience" },
     { id: "cv", name: "CV" },
     { id: "entreprise", name: "Entreprise" },
-    { id: "projects", name: "projects" },
+    { id: "Projects", name: "Projects" },
     { id: "veille", name: "Veille Technologique" },
 ];
 
@@ -223,7 +223,7 @@ const Home: React.FC = () => {
                         <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Logo_CLS.jpg" alt="Logo CLS" style={{ width: '60px', marginTop: '5px', marginBottom: '5px' }} />
                     </a>
                 </section>
-                <section id="projects" className="section experience">
+                <section id="Projects" className="section experience">
                     <h2>Projets E5</h2>
                     <div className="project-list">
                         {projectCardsData.map((project, index) => (
