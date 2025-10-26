@@ -25,7 +25,7 @@ const projectCardsData = [
         date: "19 Octobre 2025",
         description: "Plateforme de recherche d'emploi (job board) développée en utilisant les technologies web fondamentales.",
         tech: ["HTML", "CSS", "JavaScript"],
-        pdf: "Readme_OnlyJob.pdf",
+        status: "Coming Soon",
     },
     {
         title: "Portfolio",
@@ -33,7 +33,7 @@ const projectCardsData = [
         date: "26 Octobre 2025",
         description: "Mon portfolio personnel que vous consultez actuellement, créé pour présenter mes compétences et mes projets.",
         tech: ["React", "TypeScript", "SCSS", "Framer Motion"],
-        pdf: "Site actuel",
+        status: "En ligne",
     },
 ];
 
@@ -224,14 +224,13 @@ const Home: React.FC = () => {
                     </a>
                 </section>
                 <section id="Projects" className="section experience">
-                    <h2>Projets E5</h2>
+                    <h2>Projets EPITECH</h2>
                     <div className="project-list">
                         {projectCardsData.map((project, index) => (
                             <div key={index} className="experience-item">
                                 <div className="header">
                                     <h3>{project.title}</h3>
-                                    <a href={project.pdf} target="_blank" rel="noopener noreferrer">Voir le PDF
-                                    </a>
+                                    <span className="project-status">{project.status}</span>
                                     <span className="date">{project.date}</span>
                                 </div>
                                 <span className="company">{project.subtitle}</span>
