@@ -15,6 +15,7 @@ const sectionsData = [
     { id: "cv", name: "CV" },
     { id: "entreprise", name: "Entreprise" },
     { id: "Projects", name: "Projects" },
+    { id: "Projects II", name: "Projects II" },
     { id: "veille", name: "Veille Technologique" },
 ];
 
@@ -33,6 +34,17 @@ const projectCardsData = [
         date: "26 Octobre 2025",
         description: "Mon portfolio personnel que vous consultez actuellement, créé pour présenter mes compétences et mes projets.",
         tech: ["React", "TypeScript", "SCSS", "Framer Motion"],
+        status: "En ligne",
+    },
+];
+
+const projectCardsData2 = [
+    {
+        title: "Cap'tain Curse",
+        subtitle: "PRE MSC",
+        date: "02 Décembre 2025",
+        description: "Plateformer 2D en Java avec gestion des collisions, animations et niveaux.",
+        tech: ["Java", "libGDX"],
         status: "En ligne",
     },
 ];
@@ -133,7 +145,7 @@ const Home: React.FC = () => {
                 </nav>
 
                 <div className="social-icons">
-                    <a href="https://github.com/franckchincholle" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/franckchincholle!" target="_blank" rel="noopener noreferrer">
                         <GitHubIcon fontSize="large" />
                     </a>
                     <a
@@ -223,10 +235,37 @@ const Home: React.FC = () => {
                         <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Logo_CLS.jpg" alt="Logo CLS" style={{ width: '60px', marginTop: '5px', marginBottom: '5px' }} />
                     </a>
                 </section>
+
                 <section id="Projects" className="section experience">
                     <h2>Projets EPITECH</h2>
                     <div className="project-list">
                         {projectCardsData.map((project, index) => (
+                            <div key={index} className="experience-item">
+                                <div className="header">
+                                    <h3>{project.title}</h3>
+                                    <span className="project-status">{project.status}</span>
+                                    <span className="date">{project.date}</span>
+                                </div>
+                                <span className="company">{project.subtitle}</span>
+                                <p>{project.description}</p>
+                                {project.tech.length > 0 && (
+                                    <div className="tech-stack">
+                                        {project.tech.map((tech, i) => (
+                                            <span key={i} className="tech">
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
+                </section>
+
+                <section id="ProjectsII" className="section experience">
+                    <h2>Projets EPITECH</h2>
+                    <div className="project-list">
+                        {projectCardsData2.map((project, index) => (
                             <div key={index} className="experience-item">
                                 <div className="header">
                                     <h3>{project.title}</h3>
