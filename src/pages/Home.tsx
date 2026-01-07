@@ -47,6 +47,7 @@ const projectCardsData2 = [
         description: "Plateformer 2D en Java avec gestion des collisions, animations et niveaux.",
         tech: ["Java", "libGDX"],
         status: "En ligne",
+        link: "https://github.com/franckchincholle/CaptainCurse"
     },
     {
         title: "TypingLegend",
@@ -55,6 +56,7 @@ const projectCardsData2 = [
         description: "Jeu de dactylographie en Rust avec interface graphique et gestion des scores.",
         tech: ["Rust", "egui"],
         status: "En ligne",
+        link: "https://github.com/franckchincholle/TypingLegend"
     },
 ];
 
@@ -277,12 +279,19 @@ const Home: React.FC = () => {
                         ))}
                     </div>
                 </section>
-                
-                <section id="ProjectsII" className="section experience">
+
+                <section id="Projects II" className="section experience">
                     <h2>Projets EPITECH</h2>
                     <div className="project-list">
                         {projectCardsData2.map((project, index) => (
-                            <div key={index} className="experience-item">
+                            <a
+                                key={index}
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="experience-item"
+                                style={{ display: 'block', textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
+                            >
                                 <div className="header">
                                     <h3>{project.title}</h3>
                                     <span className="project-status">{project.status}</span>
@@ -299,7 +308,7 @@ const Home: React.FC = () => {
                                         ))}
                                     </div>
                                 )}
-                            </div>
+                            </a>
                         ))}
                     </div>
                 </section>
