@@ -47,6 +47,14 @@ const projectCardsData2 = [
         tech: ["Java", "libGDX"],
         status: "En ligne",
     },
+    {
+        title: "TypingLegend",
+        subtitle: "PRE MSC",
+        date: "15 Décembre 2025",
+        description: "Jeu de dactylographie en Rust avec interface graphique et gestion des scores.",
+        tech: ["Rust", "egui"],
+        status: "En ligne",
+    },
 ];
 
 const experiencesData = [
