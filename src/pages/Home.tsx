@@ -35,6 +35,7 @@ const projectCardsData = [
         description: "Mon portfolio personnel que vous consultez actuellement, créé pour présenter mes compétences et mes projets.",
         tech: ["React", "TypeScript", "SCSS", "Framer Motion"],
         status: "En ligne",
+        link: "https://github.com/franckchincholle/portfolio",
     },
 ];
 
@@ -180,7 +181,7 @@ const Home: React.FC = () => {
                         Curieux, rigoureux et toujours motivé à apprendre, j’aime relever de nouveaux défis et travailler sur des projets concrets qui allient technique et créativité.
                     </p>
                     <p>
-                         Ayant obtenu mon BTS SIO option SISR en cet été 2025 et accepté à EPITECH Toulouse pour un Master of Science, je suis actuellement à la recherche d'une alternance en cybersécurité pour les 3 ans à venir à partir de Janvier 2026.
+                        Ayant obtenu mon BTS SIO option SISR en cet été 2025 et accepté à EPITECH Toulouse pour un Master of Science, je suis actuellement à la recherche d'une alternance en cybersécurité pour les 3 ans à venir à partir de Janvier 2026.
                     </p>
                 </section>
 
@@ -248,7 +249,14 @@ const Home: React.FC = () => {
                     <h2>Projets EPITECH</h2>
                     <div className="project-list">
                         {projectCardsData.map((project, index) => (
-                            <div key={index} className="experience-item">
+                            <a
+                                key={index}
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="experience-item"
+                                style={{ display: 'block', textDecoration: 'none', color: 'inherit', cursor: 'pointer' }}
+                            >
                                 <div className="header">
                                     <h3>{project.title}</h3>
                                     <span className="project-status">{project.status}</span>
@@ -265,11 +273,11 @@ const Home: React.FC = () => {
                                         ))}
                                     </div>
                                 )}
-                            </div>
+                            </a>
                         ))}
                     </div>
                 </section>
-
+                
                 <section id="ProjectsII" className="section experience">
                     <h2>Projets EPITECH</h2>
                     <div className="project-list">
@@ -302,9 +310,9 @@ const Home: React.FC = () => {
                         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
                             <a href="https://www.th-formations-en-cybersecurite-et-informatique.fr" target="_blank" rel="noopener noreferrer">
                                 <img
-                                src="https://primary.jwwb.nl/public/h/a/i/temp-kgajfdohdkbphashzqbs/image-high.png?enable-io=true&amp;enable=upscale&amp;width=229"
-                                alt="TH Logo"
-                                style={{ width: '100px', height: '100px', marginRight: '15px' }}
+                                    src="https://primary.jwwb.nl/public/h/a/i/temp-kgajfdohdkbphashzqbs/image-high.png?enable-io=true&amp;enable=upscale&amp;width=229"
+                                    alt="TH Logo"
+                                    style={{ width: '100px', height: '100px', marginRight: '15px' }}
                                 />
                             </a>
                             <div style={{ width: '2px', height: '80px', backgroundColor: '#b68af5', marginRight: '15px' }}></div>
@@ -319,9 +327,9 @@ const Home: React.FC = () => {
                         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
                             <a href="https://www.linkedin.com/groups/4880871/" target="_blank" rel="noopener noreferrer">
                                 <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"
-                                alt="Linkedin logo"
-                                style={{ width: '100px', height: '100px', marginRight: '15px' }}
+                                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/LinkedIn_icon.svg/1024px-LinkedIn_icon.svg.png"
+                                    alt="Linkedin logo"
+                                    style={{ width: '100px', height: '100px', marginRight: '15px' }}
                                 />
                             </a>
                             <div style={{ width: '2px', height: '80px', backgroundColor: '#b68af5', marginRight: '15px' }}></div>
@@ -336,9 +344,9 @@ const Home: React.FC = () => {
                         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
                             <a href="https://www.reddit.com" target="_blank" rel="noopener noreferrer">
                                 <img
-                                src="https://yt3.googleusercontent.com/ZBnkDCcneFV2uCrAOIzTCN4ItYEMoq6LFLs36qbJ0q6pPkQh1YVusaIsx5Hqn8n5BpYIhlg1Tg=s900-c-k-c0x00ffffff-no-rj"
-                                alt="Reddit logo"
-                                style={{ width: '100px', height: '100px', marginRight: '15px' }}
+                                    src="https://yt3.googleusercontent.com/ZBnkDCcneFV2uCrAOIzTCN4ItYEMoq6LFLs36qbJ0q6pPkQh1YVusaIsx5Hqn8n5BpYIhlg1Tg=s900-c-k-c0x00ffffff-no-rj"
+                                    alt="Reddit logo"
+                                    style={{ width: '100px', height: '100px', marginRight: '15px' }}
                                 />
                             </a>
                             <div style={{ width: '2px', height: '80px', backgroundColor: '#b68af5', marginRight: '15px' }}></div>
@@ -353,9 +361,9 @@ const Home: React.FC = () => {
                         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
                             <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">
                                 <img
-                                src="data:image/png;base64,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"
-                                alt="YT logo"
-                                style={{ width: '100px', height: '100px', marginRight: '15px' }}
+                                    src="data:image/png;base64,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"
+                                    alt="YT logo"
+                                    style={{ width: '100px', height: '100px', marginRight: '15px' }}
                                 />
                             </a>
                             <div style={{ width: '2px', height: '80px', backgroundColor: '#b68af5', marginRight: '15px' }}></div>
@@ -371,9 +379,9 @@ const Home: React.FC = () => {
                         <div style={{ display: 'flex', alignItems: 'center', marginBottom: '20px' }}>
                             <a href="https://www.actuia.com" target="_blank" rel="noopener noreferrer">
                                 <img
-                                src="https://media.licdn.com/dms/image/v2/C560BAQFPf4kDosaSSw/company-logo_200_200/company-logo_200_200/0/1631433984114?e=2147483647&v=beta&t=V95dVJ3a0uddluRAnKbVBsBYZUr4_fVypS0vw890Ob8"
-                                alt="Wiki logo"
-                                style={{ width: '100px', height: '100px', marginRight: '15px' }}
+                                    src="https://media.licdn.com/dms/image/v2/C560BAQFPf4kDosaSSw/company-logo_200_200/company-logo_200_200/0/1631433984114?e=2147483647&v=beta&t=V95dVJ3a0uddluRAnKbVBsBYZUr4_fVypS0vw890Ob8"
+                                    alt="Wiki logo"
+                                    style={{ width: '100px', height: '100px', marginRight: '15px' }}
                                 />
                             </a>
                             <div style={{ width: '2px', height: '80px', backgroundColor: '#b68af5', marginRight: '15px' }}></div>
