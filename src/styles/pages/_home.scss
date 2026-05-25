@@ -192,6 +192,24 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    max-height: 65vh;
+    overflow-y: auto;
+    padding-right: 15px;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+    &::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(182, 138, 245, 0.4);
+        border-radius: 4px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: #b68af5;
+    }
 }
 
 .project-list:hover .project-card:not(:hover) {
@@ -442,4 +460,10 @@
 .active-dot {
     background-color: #b68af5;
     transform: scale(1.5);
+}
+
+.project-list .experience-item {
+    min-height: auto;  /* Retire la hauteur forcée pour coller parfaitement au contenu */
+    margin-left: 0;    /* Recentre correctement la carte par rapport à la barre de défilement */
+    padding: 1rem 1.5rem; /* Ajuste un peu l'espace intérieur pour que ça respire bien */
 }
